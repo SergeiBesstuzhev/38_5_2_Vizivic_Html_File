@@ -4,8 +4,7 @@
 #include <QHBoxLayout>
 #include <QPlainTextEdit>
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     const int MIN_WIDTH = 800;
     const int MIN_HEIHGT = 600;
@@ -32,5 +31,10 @@ int main(int argc, char *argv[])
     });
 
     mainWindow->show();
+    delete mainWindow;
+    delete htmlWindow;
+    delete webView;
+    delete hbox;
+
     return a.exec();
 }
